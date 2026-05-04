@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: public
+    database: ecommerce
+    schema: public
+    description: "Raw tables written by the Kafka consumer"
+
+    tables:
+      - name: raw_orders
+        description: "Raw order events from the Kafka orders topic"
+        columns:
+          - name: order_id
+            tests: [not_null]
+          - name: total_amount
+            tests: [not_null]
+
+      - name: raw_page_clicks
+        description: "Raw page click events from the Kafka page_clicks topic"
+        columns:
+          - name: session_id
+            tests: [not_null]
+
+      - name: raw_user_signups
+        description: "Raw signup events from the Kafka user_signups topic"
+        columns:
+          - name: user_id
+            tests: [not_null]
+
+models:
+  - name: stg_orders
+    description: "Cleaned and type-cast orders from raw_orders"
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: total_amount
+        tests: [not_null]
+
+  - name: stg_page_clicks
+    description: "Cleaned page click sessions"
+    columns:
+      - name: session_id
+        tests: [not_null, unique]
+
+  - name: mart_daily_revenue
+    description: "Daily revenue aggregated by category — primary dashboard KPI table"
+
+  - name: mart_traffic_funnel
+    description: "Session traffic and conversion rate by page, device, and referrer"

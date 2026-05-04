@@ -1,0 +1,12 @@
+datapipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: pipeline_user
+      password: pipeline_pass
+      port: 5432
+      dbname: ecommerce
+      schema: public
+      threads: 4

@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 15s # scrape every 15 seconds
+  evaluation_interval: 15s # evaluate rules every 15 seconds
+
+scrape_configs:
+  # --- Prometheus Scrapes
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # --- Airflow Metrics (via StatsD Exporter)
+  - job_name: "airflow"
+    static_configs:
+      - targets: ["statsd-exporter:9102"]
+    metrics_path: /metrics
+
+  # --- PostgreSQL Metrics (via Postgres-Exporter)
+  - job_name: "postgresql"
+    static_configs:
+      - targets: ["postgres-exporter:9187"]
+    metrics_path: /metrics
