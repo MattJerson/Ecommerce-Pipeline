@@ -1,0 +1,162 @@
+name: Data Pipeline CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dbt-test:
+    name: Run dbt Tests
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: pipeline_user
+          POSTGRES_PASSWORD: pipeline_pass
+          POSTGRES_DB: ecommerce
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      # ── 1. Checkout code ───────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Python ───────────────────────────────────────────────────
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # ── 3. Cache pip dependencies ──────────────────────────────────────────
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-dbt-postgres
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # ── 4. Install dependencies ────────────────────────────────────────────
+      - name: Install dbt-postgres
+        run: pip install dbt-postgres psycopg2-binary
+
+      # ── 5. Seed raw tables so dbt has data to work with ───────────────────
+      - name: Seed raw tables
+        env:
+          PGPASSWORD: pipeline_pass
+        run: |
+          psql -h localhost -U pipeline_user -d ecommerce <<EOF
+          CREATE TABLE IF NOT EXISTS raw_orders (
+            id SERIAL PRIMARY KEY,
+            order_id TEXT,
+            user_id TEXT,
+            product_id TEXT,
+            product_name TEXT,
+            category TEXT,
+            unit_price NUMERIC(10,2),
+            quantity INT,
+            discount NUMERIC(5,2),
+            total_amount NUMERIC(10,2),
+            currency TEXT,
+            status TEXT,
+            payment_method TEXT,
+            customer_email TEXT,
+            shipping_city TEXT,
+            event_timestamp TIMESTAMP,
+            ingested_at TIMESTAMP DEFAULT NOW()
+          );
+
+          CREATE TABLE IF NOT EXISTS raw_page_clicks (
+            id SERIAL PRIMARY KEY,
+            session_id TEXT,
+            user_id TEXT,
+            page TEXT,
+            referrer TEXT,
+            device TEXT,
+            country TEXT,
+            duration_secs INT,
+            event_timestamp TIMESTAMP,
+            ingested_at TIMESTAMP DEFAULT NOW()
+          );
+
+          CREATE TABLE IF NOT EXISTS raw_user_signups (
+            id SERIAL PRIMARY KEY,
+            user_id TEXT,
+            email TEXT,
+            full_name TEXT,
+            country TEXT,
+            signup_method TEXT,
+            event_timestamp TIMESTAMP,
+            ingested_at TIMESTAMP DEFAULT NOW()
+          );
+
+          -- Insert sample data so mart models have rows to process
+          INSERT INTO raw_orders (order_id, user_id, product_id, product_name, category, unit_price, quantity, discount, total_amount, currency, status, payment_method, customer_email, shipping_city, event_timestamp)
+          VALUES
+            ('ord-001', 'usr-001', 'P001', 'Wireless Headphones', 'Electronics', 79.99, 1, 0.10, 71.99, 'PHP', 'delivered', 'gcash', 'test@example.com', 'Manila', NOW()),
+            ('ord-002', 'usr-002', 'P002', 'Running Shoes', 'Sports', 109.95, 2, 0.05, 208.90, 'PHP', 'shipped', 'credit_card', 'test2@example.com', 'Cebu', NOW()),
+            ('ord-003', 'usr-003', 'P003', 'Coffee Maker', 'Home', 49.99, 1, 0.00, 49.99, 'PHP', 'confirmed', 'paypal', 'test3@example.com', 'Davao', NOW());
+
+          INSERT INTO raw_page_clicks (session_id, user_id, page, referrer, device, country, duration_secs, event_timestamp)
+          VALUES
+            ('sess-001', 'usr-001', '/products', 'google', 'mobile', 'PH', 120, NOW()),
+            ('sess-002', 'usr-002', '/cart', 'direct', 'desktop', 'PH', 240, NOW()),
+            ('sess-003', NULL, '/', 'facebook', 'tablet', 'PH', 60, NOW());
+
+          INSERT INTO raw_user_signups (user_id, email, full_name, country, signup_method, event_timestamp)
+          VALUES
+            ('usr-001', 'test@example.com', 'Test User', 'PH', 'email', NOW()),
+            ('usr-002', 'test2@example.com', 'Test User 2', 'PH', 'google', NOW());
+          EOF
+
+      # ── 6. Create dbt profiles.yml pointing to CI postgres ────────────────
+      - name: Create dbt profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          ecommerce_pipeline:
+            target: ci
+            outputs:
+              ci:
+                type: postgres
+                host: localhost
+                port: 5432
+                dbname: ecommerce
+                user: pipeline_user
+                password: pipeline_pass
+                schema: public
+                threads: 4
+          EOF
+
+      # ── 7. Run dbt debug to verify connection ─────────────────────────────
+      - name: dbt debug
+        working-directory: ./dbt_project
+        run: dbt debug
+
+      # ── 8. Run dbt models ─────────────────────────────────────────────────
+      - name: dbt run
+        working-directory: ./dbt_project
+        run: dbt run
+
+      # ── 9. Run dbt tests ──────────────────────────────────────────────────
+      - name: dbt test
+        working-directory: ./dbt_project
+        run: dbt test
+
+      # ── 10. Upload dbt artifacts on failure for debugging ─────────────────
+      - name: Upload dbt logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-logs
+          path: dbt_project/logs/
