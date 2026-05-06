@@ -24,12 +24,11 @@ TOPICS                  = ["orders", "page_clicks", "user_signups"]
 RETRY_DELAY_SECONDS     = 5
 
 DB_CONFIG = {
-    "host":     "db.vjdfcormtplscencxggn.supabase.co",
+    "host":     "localhost",
     "port":     5432,
-    "dbname":   "postgres",
-    "user":     "postgres",
-    "password": "databasepipeline0880",
-    "sslmode":  "require",
+    "dbname":   "ecommerce",
+    "user":     "pipeline_user",
+    "password": "pipeline_pass",
 }
 
 # --- DB Bootstrap
