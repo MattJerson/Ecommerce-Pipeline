@@ -1845,3 +1845,797 @@ OSError: [Errno 48] Address already in use
 [0m05:30:13.070171 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'introspect': 'True', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'invocation_command': 'dbt docs serve --port 8081', 'empty': 'None', 'warn_error': 'None', 'static_parser': 'True', 'version_check': 'True', 'log_format': 'default'}
 [0m05:30:13.182309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4d3f10db-d200-442f-9ea9-a0ca22381b0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109358e80>]}
 [0m05:30:13.207926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4d3f10db-d200-442f-9ea9-a0ca22381b0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109770430>]}
+[0m12:09:25.254032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c09910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c97df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c97340>]}
+
+
+============================== 12:09:25.258372 | 72cc0799-53ee-408c-a7e3-d4f37bb8bdf8 ==============================
+[0m12:09:25.258372 [info ] [MainThread]: Running with dbt=1.10.20
+[0m12:09:25.258701 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'empty': 'None', 'fail_fast': 'False', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'indirect_selection': 'eager', 'version_check': 'True', 'warn_error': 'None', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'no_print': 'None', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'use_colors': 'True', 'partial_parse': 'True'}
+[0m12:09:25.388476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72cc0799-53ee-408c-a7e3-d4f37bb8bdf8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c77130>]}
+[0m12:09:25.396127 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m12:09:25.396819 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m12:09:25.398651 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.19532359, "process_in_blocks": "0", "process_kernel_time": 0.083491, "process_mem_max_rss": "105168896", "process_out_blocks": "0", "process_user_time": 0.662538}
+[0m12:09:25.398886 [debug] [MainThread]: Command `cli deps` succeeded at 12:09:25.398836 after 0.20 seconds
+[0m12:09:25.399065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c09910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e91bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c77130>]}
+[0m12:09:25.399238 [debug] [MainThread]: Flushing usage events
+[0m12:09:26.569091 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:30:55.309825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cacd910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db5be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db5b370>]}
+
+
+============================== 18:30:55.312092 | e2534aa7-7593-4b84-b16d-f9f2f375bbb9 ==============================
+[0m18:30:55.312092 [info ] [MainThread]: Running with dbt=1.10.20
+[0m18:30:55.312374 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_colors': 'True', 'log_cache_events': 'False', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'introspect': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt ', 'warn_error': 'None', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'printer_width': '80', 'target_path': 'None', 'cache_selected_only': 'False', 'empty': 'None', 'quiet': 'False', 'version_check': 'True', 'no_print': 'None', 'debug': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False'}
+[0m18:30:55.418556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2534aa7-7593-4b84-b16d-f9f2f375bbb9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daeb520>]}
+[0m18:30:55.428252 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:30:55.428875 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:30:55.430774 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.18044463, "process_in_blocks": "0", "process_kernel_time": 0.116511, "process_mem_max_rss": "105431040", "process_out_blocks": "0", "process_user_time": 0.706867}
+[0m18:30:55.431010 [debug] [MainThread]: Command `cli deps` succeeded at 18:30:55.430956 after 0.18 seconds
+[0m18:30:55.431307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cacd910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd55be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daeb520>]}
+[0m18:30:55.431503 [debug] [MainThread]: Flushing usage events
+[0m18:30:56.527814 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:15.604608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff78b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d083fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0834c0>]}
+
+
+============================== 17:10:15.606364 | 3da03e22-30f3-41ad-961f-64e5403e1918 ==============================
+[0m17:10:15.606364 [info ] [MainThread]: Running with dbt=1.10.20
+[0m17:10:15.606639 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'introspect': 'True', 'debug': 'False', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'version_check': 'True', 'invocation_command': 'dbt ', 'log_cache_events': 'False', 'empty': 'None', 'warn_error': 'None', 'quiet': 'False', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'no_print': 'None', 'target_path': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'printer_width': '80'}
+[0m17:10:15.721512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3da03e22-30f3-41ad-961f-64e5403e1918', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0834c0>]}
+[0m17:10:15.730055 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:10:15.730664 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:10:15.751455 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.1822138, "process_in_blocks": "0", "process_kernel_time": 0.081431, "process_mem_max_rss": "105168896", "process_out_blocks": "0", "process_user_time": 0.670697}
+[0m17:10:15.751774 [debug] [MainThread]: Command `cli deps` succeeded at 17:10:15.751714 after 0.18 seconds
+[0m17:10:15.751960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff78b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d27db80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d0834c0>]}
+[0m17:10:15.752151 [debug] [MainThread]: Flushing usage events
+[0m17:10:16.831575 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:27:07.132658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086b06d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10973c370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10973c700>]}
+
+
+============================== 17:27:07.135544 | ce3d9b4a-7f37-40fa-b01f-d1e493824b4f ==============================
+[0m17:27:07.135544 [info ] [MainThread]: Running with dbt=1.10.20
+[0m17:27:07.135862 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'target_path': 'None', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'use_colors': 'True', 'warn_error': 'None', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'static_parser': 'True', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'debug': 'False', 'quiet': 'False', 'partial_parse': 'True'}
+[0m17:27:07.256528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e1ebb0>]}
+[0m17:27:07.283862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b1fa30>]}
+[0m17:27:07.284647 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m17:27:07.341080 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m17:27:07.442299 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:27:07.442507 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:27:07.467857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a70e130>]}
+[0m17:27:07.514604 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/manifest.json
+[0m17:27:07.516028 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/semantic_manifest.json
+[0m17:27:07.526929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a717340>]}
+[0m17:27:07.527164 [info ] [MainThread]: Found 4 models, 9 data tests, 3 sources, 447 macros
+[0m17:27:07.527328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e75df0>]}
+[0m17:27:07.528001 [info ] [MainThread]: 
+[0m17:27:07.528165 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:27:07.528302 [info ] [MainThread]: 
+[0m17:27:07.528531 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:27:07.530530 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m17:27:07.560074 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m17:27:07.560281 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:27:07.560412 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:08.112050 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.551 seconds
+[0m17:27:08.114588 [debug] [ThreadPool]: On list_postgres: Close
+[0m17:27:08.117306 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m17:27:08.126989 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m17:27:08.127585 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m17:27:08.127978 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:27:08.574075 [debug] [ThreadPool]: SQL status: BEGIN in 0.446 seconds
+[0m17:27:08.575353 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m17:27:08.575892 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:27:08.629227 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.053 seconds
+[0m17:27:08.631831 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m17:27:08.679075 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m17:27:08.682655 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:08.682888 [debug] [MainThread]: On master: BEGIN
+[0m17:27:08.683056 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:27:09.084695 [debug] [MainThread]: SQL status: BEGIN in 0.402 seconds
+[0m17:27:09.085165 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:09.085520 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:27:09.133841 [debug] [MainThread]: SQL status: SELECT 1 in 0.048 seconds
+[0m17:27:09.135992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e91460>]}
+[0m17:27:09.136773 [debug] [MainThread]: On master: ROLLBACK
+[0m17:27:09.180126 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:09.181040 [debug] [MainThread]: On master: BEGIN
+[0m17:27:09.267687 [debug] [MainThread]: SQL status: BEGIN in 0.086 seconds
+[0m17:27:09.268141 [debug] [MainThread]: On master: COMMIT
+[0m17:27:09.268642 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:09.268961 [debug] [MainThread]: On master: COMMIT
+[0m17:27:09.312072 [debug] [MainThread]: SQL status: COMMIT in 0.043 seconds
+[0m17:27:09.312377 [debug] [MainThread]: On master: Close
+[0m17:27:09.314410 [debug] [Thread-1  ]: Began running node model.datapipeline.stg_orders
+[0m17:27:09.314667 [debug] [Thread-2  ]: Began running node model.datapipeline.stg_page_clicks
+[0m17:27:09.314956 [info ] [Thread-1  ]: 1 of 4 START sql view model public.stg_orders .................................. [RUN]
+[0m17:27:09.315259 [info ] [Thread-2  ]: 2 of 4 START sql view model public.stg_page_clicks ............................. [RUN]
+[0m17:27:09.315587 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_postgres, now model.datapipeline.stg_orders)
+[0m17:27:09.315849 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_postgres_public, now model.datapipeline.stg_page_clicks)
+[0m17:27:09.316070 [debug] [Thread-1  ]: Began compiling node model.datapipeline.stg_orders
+[0m17:27:09.316273 [debug] [Thread-2  ]: Began compiling node model.datapipeline.stg_page_clicks
+[0m17:27:09.321213 [debug] [Thread-1  ]: Writing injected SQL for node "model.datapipeline.stg_orders"
+[0m17:27:09.322678 [debug] [Thread-2  ]: Writing injected SQL for node "model.datapipeline.stg_page_clicks"
+[0m17:27:09.323236 [debug] [Thread-1  ]: Began executing node model.datapipeline.stg_orders
+[0m17:27:09.323417 [debug] [Thread-2  ]: Began executing node model.datapipeline.stg_page_clicks
+[0m17:27:09.342914 [debug] [Thread-1  ]: Writing runtime sql for node "model.datapipeline.stg_orders"
+[0m17:27:09.343146 [debug] [Thread-2  ]: Writing runtime sql for node "model.datapipeline.stg_page_clicks"
+[0m17:27:09.343732 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:27:09.343929 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:27:09.344105 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: BEGIN
+[0m17:27:09.344280 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: BEGIN
+[0m17:27:09.344436 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:27:09.344592 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m17:27:09.772284 [debug] [Thread-2  ]: SQL status: BEGIN in 0.427 seconds
+[0m17:27:09.773236 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:27:09.773660 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_page_clicks"} */
+
+  create view "postgres"."public"."stg_page_clicks__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_page_clicks.sql
+-- Cleans raw_page_clicks, flags anonymous sessions
+
+with source as (
+    select * from "ecommerce"."public"."raw_page_clicks"
+),
+
+cleaned as (
+    select
+        session_id,
+        user_id,
+        case
+            when user_id is null then true
+            else false
+        end                          as is_anonymous,
+        page,
+        coalesce(referrer, 'direct') as referrer,   -- null referrer = direct visit
+        lower(device)                as device,
+        upper(country)               as country,
+        duration_secs::int           as duration_secs,
+        event_timestamp::timestamp   as clicked_at,
+        ingested_at
+
+    from source
+    where session_id is not null
+)
+
+select * from cleaned
+  );
+[0m17:27:09.824928 [debug] [Thread-2  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "ecommerce.public.raw_page_clicks"
+LINE 11:     select * from "ecommerce"."public"."raw_page_clicks"
+                           ^
+
+[0m17:27:09.826346 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: ROLLBACK
+[0m17:27:09.877364 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: Close
+[0m17:27:09.909006 [debug] [Thread-2  ]: Database Error in model stg_page_clicks (models/staging/stg_page_clicks.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_page_clicks"
+  LINE 11:     select * from "ecommerce"."public"."raw_page_clicks"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_page_clicks.sql
+[0m17:27:09.910975 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aca7c70>]}
+[0m17:27:09.911549 [error] [Thread-2  ]: 2 of 4 ERROR creating sql view model public.stg_page_clicks .................... [[31mERROR[0m in 0.59s]
+[0m17:27:09.912127 [debug] [Thread-2  ]: Finished running node model.datapipeline.stg_page_clicks
+[0m17:27:09.912600 [debug] [Thread-7  ]: Marking all children of 'model.datapipeline.stg_page_clicks' to be skipped because of status 'error'.  Reason: Database Error in model stg_page_clicks (models/staging/stg_page_clicks.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_page_clicks"
+  LINE 11:     select * from "ecommerce"."public"."raw_page_clicks"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_page_clicks.sql.
+[0m17:27:12.782133 [debug] [Thread-1  ]: SQL status: BEGIN in 3.437 seconds
+[0m17:27:12.783078 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:27:12.783718 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_orders"} */
+
+  create view "postgres"."public"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_orders.sql
+-- Cleans and type-casts raw_orders into a reliable staging layer
+
+with source as (
+    select * from "ecommerce"."public"."raw_orders"
+),
+
+cleaned as (
+    select
+        order_id,
+        user_id,
+        product_id,
+        product_name,
+        category,
+        unit_price::numeric(10,2)   as unit_price,
+        quantity::int                as quantity,
+        discount::numeric(5,2)       as discount,
+        total_amount::numeric(10,2)  as total_amount,
+        currency,
+        lower(status)                as status,
+        lower(payment_method)        as payment_method,
+        lower(customer_email)        as customer_email,
+        shipping_city,
+        event_timestamp::timestamp   as ordered_at,
+        ingested_at
+
+    from source
+    where order_id is not null        -- drop malformed rows
+      and total_amount > 0            -- drop zero-value orders
+)
+
+select * from cleaned
+  );
+[0m17:27:12.831206 [debug] [Thread-1  ]: Postgres adapter: Postgres error: cross-database references are not implemented: "ecommerce.public.raw_orders"
+LINE 11:     select * from "ecommerce"."public"."raw_orders"
+                           ^
+
+[0m17:27:12.832502 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: ROLLBACK
+[0m17:27:12.879584 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: Close
+[0m17:27:12.891540 [debug] [Thread-1  ]: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_orders"
+  LINE 11:     select * from "ecommerce"."public"."raw_orders"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_orders.sql
+[0m17:27:12.892640 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ce3d9b4a-7f37-40fa-b01f-d1e493824b4f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac3deb0>]}
+[0m17:27:12.893667 [error] [Thread-1  ]: 1 of 4 ERROR creating sql view model public.stg_orders ......................... [[31mERROR[0m in 3.58s]
+[0m17:27:12.894331 [debug] [Thread-1  ]: Finished running node model.datapipeline.stg_orders
+[0m17:27:12.894961 [debug] [Thread-7  ]: Marking all children of 'model.datapipeline.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models/staging/stg_orders.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_orders"
+  LINE 11:     select * from "ecommerce"."public"."raw_orders"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_orders.sql.
+[0m17:27:12.896067 [debug] [Thread-4  ]: Began running node model.datapipeline.mart_daily_revenue
+[0m17:27:12.896500 [debug] [Thread-3  ]: Began running node model.datapipeline.mart_traffic_funnel
+[0m17:27:12.897043 [info ] [Thread-4  ]: 3 of 4 SKIP relation public.mart_daily_revenue ................................. [[33mSKIP[0m]
+[0m17:27:12.897472 [info ] [Thread-3  ]: 4 of 4 SKIP relation public.mart_traffic_funnel ................................ [[33mSKIP[0m]
+[0m17:27:12.897878 [debug] [Thread-4  ]: Finished running node model.datapipeline.mart_daily_revenue
+[0m17:27:12.898234 [debug] [Thread-3  ]: Finished running node model.datapipeline.mart_traffic_funnel
+[0m17:27:12.899988 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:12.900569 [debug] [MainThread]: On master: BEGIN
+[0m17:27:12.901080 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:27:13.292927 [debug] [MainThread]: SQL status: BEGIN in 0.392 seconds
+[0m17:27:13.294422 [debug] [MainThread]: On master: COMMIT
+[0m17:27:13.295318 [debug] [MainThread]: Using postgres connection "master"
+[0m17:27:13.296115 [debug] [MainThread]: On master: COMMIT
+[0m17:27:13.337495 [debug] [MainThread]: SQL status: COMMIT in 0.041 seconds
+[0m17:27:13.339061 [debug] [MainThread]: On master: Close
+[0m17:27:13.340788 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:27:13.341362 [debug] [MainThread]: Connection 'model.datapipeline.stg_orders' was properly closed.
+[0m17:27:13.341767 [debug] [MainThread]: Connection 'model.datapipeline.stg_page_clicks' was properly closed.
+[0m17:27:13.342429 [info ] [MainThread]: 
+[0m17:27:13.342952 [info ] [MainThread]: Finished running 2 table models, 2 view models in 0 hours 0 minutes and 5.81 seconds (5.81s).
+[0m17:27:13.344163 [debug] [MainThread]: Command end result
+[0m17:27:13.373643 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/manifest.json
+[0m17:27:13.375086 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/semantic_manifest.json
+[0m17:27:13.380260 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/run_results.json
+[0m17:27:13.380518 [info ] [MainThread]: 
+[0m17:27:13.380798 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m17:27:13.381136 [info ] [MainThread]: 
+[0m17:27:13.381442 [error] [MainThread]: [31mFailure in model stg_page_clicks (models/staging/stg_page_clicks.sql)[0m
+[0m17:27:13.381710 [error] [MainThread]:   Database Error in model stg_page_clicks (models/staging/stg_page_clicks.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_page_clicks"
+  LINE 11:     select * from "ecommerce"."public"."raw_page_clicks"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_page_clicks.sql
+[0m17:27:13.381921 [info ] [MainThread]: 
+[0m17:27:13.382158 [info ] [MainThread]:   compiled code at target/compiled/datapipeline/models/staging/stg_page_clicks.sql
+[0m17:27:13.382365 [info ] [MainThread]: 
+[0m17:27:13.382602 [error] [MainThread]: [31mFailure in model stg_orders (models/staging/stg_orders.sql)[0m
+[0m17:27:13.382848 [error] [MainThread]:   Database Error in model stg_orders (models/staging/stg_orders.sql)
+  cross-database references are not implemented: "ecommerce.public.raw_orders"
+  LINE 11:     select * from "ecommerce"."public"."raw_orders"
+                             ^
+  compiled code at target/run/datapipeline/models/staging/stg_orders.sql
+[0m17:27:13.383047 [info ] [MainThread]: 
+[0m17:27:13.383273 [info ] [MainThread]:   compiled code at target/compiled/datapipeline/models/staging/stg_orders.sql
+[0m17:27:13.383469 [info ] [MainThread]: 
+[0m17:27:13.383692 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=2 NO-OP=0 TOTAL=4
+[0m17:27:13.386247 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.2967415, "process_in_blocks": "0", "process_kernel_time": 0.192715, "process_mem_max_rss": "133267456", "process_out_blocks": "0", "process_user_time": 1.134038}
+[0m17:27:13.386570 [debug] [MainThread]: Command `dbt run` failed at 17:27:13.386510 after 6.30 seconds
+[0m17:27:13.386830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086b06d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089fdfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096f8970>]}
+[0m17:27:13.387085 [debug] [MainThread]: Flushing usage events
+[0m17:27:14.270291 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:28:14.014871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd50670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cddc280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cddc610>]}
+
+
+============================== 17:28:14.016914 | 353df335-3bdf-449e-ab7a-7490c5f53117 ==============================
+[0m17:28:14.016914 [info ] [MainThread]: Running with dbt=1.10.20
+[0m17:28:14.017172 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'debug': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'partial_parse': 'True', 'printer_width': '80', 'empty': 'False', 'quiet': 'False', 'target_path': 'None', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/mattjersonfigueroa/datapipeline/dbt_project/logs', 'warn_error': 'None', 'use_experimental_parser': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'log_format': 'default', 'profiles_dir': '/Users/mattjersonfigueroa/datapipeline/dbt_project', 'send_anonymous_usage_stats': 'True'}
+[0m17:28:14.101839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd79d30>]}
+[0m17:28:14.128529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d48bf40>]}
+[0m17:28:14.129029 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m17:28:14.182599 [debug] [MainThread]: checksum: a2dd717d56b7fa105aa967460f8408a71460d755763c8570e48c01c133187aea, vars: {}, profile: , target: , version: 1.10.20
+[0m17:28:14.272773 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:28:14.272993 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:28:14.298758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddef130>]}
+[0m17:28:14.347295 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/manifest.json
+[0m17:28:14.348388 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/semantic_manifest.json
+[0m17:28:14.359054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de0fc10>]}
+[0m17:28:14.359311 [info ] [MainThread]: Found 4 models, 9 data tests, 3 sources, 447 macros
+[0m17:28:14.359478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd6ddc0>]}
+[0m17:28:14.360149 [info ] [MainThread]: 
+[0m17:28:14.360312 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:28:14.360447 [info ] [MainThread]: 
+[0m17:28:14.360672 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:28:14.362685 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m17:28:14.392939 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m17:28:14.393151 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:28:14.393276 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:28:14.815257 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.422 seconds
+[0m17:28:14.818393 [debug] [ThreadPool]: On list_postgres: Close
+[0m17:28:14.820872 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m17:28:14.830713 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m17:28:14.831172 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m17:28:14.831487 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:28:15.221782 [debug] [ThreadPool]: SQL status: BEGIN in 0.390 seconds
+[0m17:28:15.222913 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m17:28:15.223480 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:28:15.267410 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.043 seconds
+[0m17:28:15.271084 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m17:28:15.311492 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m17:28:15.321971 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:15.322502 [debug] [MainThread]: On master: BEGIN
+[0m17:28:15.322891 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:28:15.733886 [debug] [MainThread]: SQL status: BEGIN in 0.411 seconds
+[0m17:28:15.735104 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:15.735730 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:28:15.783578 [debug] [MainThread]: SQL status: SELECT 1 in 0.047 seconds
+[0m17:28:15.787170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5a2c40>]}
+[0m17:28:15.788136 [debug] [MainThread]: On master: ROLLBACK
+[0m17:28:15.831324 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:15.832241 [debug] [MainThread]: On master: BEGIN
+[0m17:28:15.920422 [debug] [MainThread]: SQL status: BEGIN in 0.087 seconds
+[0m17:28:15.921770 [debug] [MainThread]: On master: COMMIT
+[0m17:28:15.922584 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:15.923303 [debug] [MainThread]: On master: COMMIT
+[0m17:28:15.966721 [debug] [MainThread]: SQL status: COMMIT in 0.043 seconds
+[0m17:28:15.967311 [debug] [MainThread]: On master: Close
+[0m17:28:15.970858 [debug] [Thread-1  ]: Began running node model.datapipeline.stg_orders
+[0m17:28:15.971200 [debug] [Thread-2  ]: Began running node model.datapipeline.stg_page_clicks
+[0m17:28:15.971683 [info ] [Thread-1  ]: 1 of 4 START sql view model public.stg_orders .................................. [RUN]
+[0m17:28:15.972118 [info ] [Thread-2  ]: 2 of 4 START sql view model public.stg_page_clicks ............................. [RUN]
+[0m17:28:15.972508 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_postgres_public, now model.datapipeline.stg_orders)
+[0m17:28:15.972843 [debug] [Thread-2  ]: Acquiring new postgres connection 'model.datapipeline.stg_page_clicks'
+[0m17:28:15.973100 [debug] [Thread-1  ]: Began compiling node model.datapipeline.stg_orders
+[0m17:28:15.973335 [debug] [Thread-2  ]: Began compiling node model.datapipeline.stg_page_clicks
+[0m17:28:15.979209 [debug] [Thread-1  ]: Writing injected SQL for node "model.datapipeline.stg_orders"
+[0m17:28:15.981432 [debug] [Thread-2  ]: Writing injected SQL for node "model.datapipeline.stg_page_clicks"
+[0m17:28:15.982039 [debug] [Thread-2  ]: Began executing node model.datapipeline.stg_page_clicks
+[0m17:28:15.982311 [debug] [Thread-1  ]: Began executing node model.datapipeline.stg_orders
+[0m17:28:16.003731 [debug] [Thread-1  ]: Writing runtime sql for node "model.datapipeline.stg_orders"
+[0m17:28:16.003915 [debug] [Thread-2  ]: Writing runtime sql for node "model.datapipeline.stg_page_clicks"
+[0m17:28:16.004338 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:28:16.004560 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:28:16.004736 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: BEGIN
+[0m17:28:16.004907 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: BEGIN
+[0m17:28:16.005075 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m17:28:16.005236 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:28:16.433335 [debug] [Thread-2  ]: SQL status: BEGIN in 0.428 seconds
+[0m17:28:16.434948 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:28:16.436048 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_page_clicks"} */
+
+  create view "postgres"."public"."stg_page_clicks__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_page_clicks.sql
+-- Cleans raw_page_clicks, flags anonymous sessions
+
+with source as (
+    select * from "postgres"."public"."raw_page_clicks"
+),
+
+cleaned as (
+    select
+        session_id,
+        user_id,
+        case
+            when user_id is null then true
+            else false
+        end                          as is_anonymous,
+        page,
+        coalesce(referrer, 'direct') as referrer,   -- null referrer = direct visit
+        lower(device)                as device,
+        upper(country)               as country,
+        duration_secs::int           as duration_secs,
+        event_timestamp::timestamp   as clicked_at,
+        ingested_at
+
+    from source
+    where session_id is not null
+)
+
+select * from cleaned
+  );
+[0m17:28:16.483663 [debug] [Thread-1  ]: SQL status: BEGIN in 0.478 seconds
+[0m17:28:16.485204 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:28:16.485901 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_orders"} */
+
+  create view "postgres"."public"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_orders.sql
+-- Cleans and type-casts raw_orders into a reliable staging layer
+
+with source as (
+    select * from "postgres"."public"."raw_orders"
+),
+
+cleaned as (
+    select
+        order_id,
+        user_id,
+        product_id,
+        product_name,
+        category,
+        unit_price::numeric(10,2)   as unit_price,
+        quantity::int                as quantity,
+        discount::numeric(5,2)       as discount,
+        total_amount::numeric(10,2)  as total_amount,
+        currency,
+        lower(status)                as status,
+        lower(payment_method)        as payment_method,
+        lower(customer_email)        as customer_email,
+        shipping_city,
+        event_timestamp::timestamp   as ordered_at,
+        ingested_at
+
+    from source
+    where order_id is not null        -- drop malformed rows
+      and total_amount > 0            -- drop zero-value orders
+)
+
+select * from cleaned
+  );
+[0m17:28:16.495135 [debug] [Thread-2  ]: SQL status: CREATE VIEW in 0.058 seconds
+[0m17:28:16.506546 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:28:16.507234 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_page_clicks"} */
+alter table "postgres"."public"."stg_page_clicks__dbt_tmp" rename to "stg_page_clicks"
+[0m17:28:16.543665 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.057 seconds
+[0m17:28:16.550670 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:28:16.551526 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_orders"} */
+alter table "postgres"."public"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m17:28:16.553631 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.046 seconds
+[0m17:28:16.571032 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: COMMIT
+[0m17:28:16.571645 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:28:16.572014 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: COMMIT
+[0m17:28:16.603257 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.051 seconds
+[0m17:28:16.605608 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: COMMIT
+[0m17:28:16.606126 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:28:16.606469 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: COMMIT
+[0m17:28:16.618145 [debug] [Thread-2  ]: SQL status: COMMIT in 0.046 seconds
+[0m17:28:16.626642 [debug] [Thread-2  ]: Applying DROP to: "postgres"."public"."stg_page_clicks__dbt_backup"
+[0m17:28:16.630941 [debug] [Thread-2  ]: Using postgres connection "model.datapipeline.stg_page_clicks"
+[0m17:28:16.631283 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_page_clicks"} */
+drop view if exists "postgres"."public"."stg_page_clicks__dbt_backup" cascade
+[0m17:28:16.657921 [debug] [Thread-1  ]: SQL status: COMMIT in 0.051 seconds
+[0m17:28:16.661128 [debug] [Thread-1  ]: Applying DROP to: "postgres"."public"."stg_orders__dbt_backup"
+[0m17:28:16.661894 [debug] [Thread-1  ]: Using postgres connection "model.datapipeline.stg_orders"
+[0m17:28:16.662244 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.stg_orders"} */
+drop view if exists "postgres"."public"."stg_orders__dbt_backup" cascade
+[0m17:28:16.678657 [debug] [Thread-2  ]: SQL status: DROP VIEW in 0.047 seconds
+[0m17:28:16.681668 [debug] [Thread-2  ]: On model.datapipeline.stg_page_clicks: Close
+[0m17:28:16.684715 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2947c0>]}
+[0m17:28:16.685412 [info ] [Thread-2  ]: 2 of 4 OK created sql view model public.stg_page_clicks ........................ [[32mCREATE VIEW[0m in 0.71s]
+[0m17:28:16.685982 [debug] [Thread-2  ]: Finished running node model.datapipeline.stg_page_clicks
+[0m17:28:16.713390 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.050 seconds
+[0m17:28:16.715388 [debug] [Thread-1  ]: On model.datapipeline.stg_orders: Close
+[0m17:28:16.716221 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3b3220>]}
+[0m17:28:16.716891 [info ] [Thread-1  ]: 1 of 4 OK created sql view model public.stg_orders ............................. [[32mCREATE VIEW[0m in 0.74s]
+[0m17:28:16.717386 [debug] [Thread-1  ]: Finished running node model.datapipeline.stg_orders
+[0m17:28:16.718089 [debug] [Thread-4  ]: Began running node model.datapipeline.mart_daily_revenue
+[0m17:28:16.718475 [debug] [Thread-3  ]: Began running node model.datapipeline.mart_traffic_funnel
+[0m17:28:16.718964 [info ] [Thread-4  ]: 3 of 4 START sql table model public.mart_daily_revenue ......................... [RUN]
+[0m17:28:16.719376 [info ] [Thread-3  ]: 4 of 4 START sql table model public.mart_traffic_funnel ........................ [RUN]
+[0m17:28:16.719820 [debug] [Thread-4  ]: Acquiring new postgres connection 'model.datapipeline.mart_daily_revenue'
+[0m17:28:16.720202 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.datapipeline.mart_traffic_funnel'
+[0m17:28:16.720523 [debug] [Thread-4  ]: Began compiling node model.datapipeline.mart_daily_revenue
+[0m17:28:16.720820 [debug] [Thread-3  ]: Began compiling node model.datapipeline.mart_traffic_funnel
+[0m17:28:16.723754 [debug] [Thread-4  ]: Writing injected SQL for node "model.datapipeline.mart_daily_revenue"
+[0m17:28:16.727170 [debug] [Thread-3  ]: Writing injected SQL for node "model.datapipeline.mart_traffic_funnel"
+[0m17:28:16.728030 [debug] [Thread-4  ]: Began executing node model.datapipeline.mart_daily_revenue
+[0m17:28:16.728323 [debug] [Thread-3  ]: Began executing node model.datapipeline.mart_traffic_funnel
+[0m17:28:16.745897 [debug] [Thread-3  ]: Writing runtime sql for node "model.datapipeline.mart_traffic_funnel"
+[0m17:28:16.747831 [debug] [Thread-4  ]: Writing runtime sql for node "model.datapipeline.mart_daily_revenue"
+[0m17:28:16.748342 [debug] [Thread-4  ]: Using postgres connection "model.datapipeline.mart_daily_revenue"
+[0m17:28:16.748587 [debug] [Thread-3  ]: Using postgres connection "model.datapipeline.mart_traffic_funnel"
+[0m17:28:16.748782 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: BEGIN
+[0m17:28:16.748983 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: BEGIN
+[0m17:28:16.749178 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m17:28:16.749356 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m17:28:17.178980 [debug] [Thread-3  ]: SQL status: BEGIN in 0.429 seconds
+[0m17:28:17.179587 [debug] [Thread-4  ]: SQL status: BEGIN in 0.430 seconds
+[0m17:28:17.180057 [debug] [Thread-3  ]: Using postgres connection "model.datapipeline.mart_traffic_funnel"
+[0m17:28:17.180548 [debug] [Thread-4  ]: Using postgres connection "model.datapipeline.mart_daily_revenue"
+[0m17:28:17.181089 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_traffic_funnel"} */
+
+  
+    
+
+  create  table "postgres"."public"."mart_traffic_funnel__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/mart_traffic_funnel.sql
+-- Joins clicks + orders to measure conversion by page and device
+
+with clicks as (
+    select * from "postgres"."public"."stg_page_clicks"
+),
+
+orders as (
+    select * from "postgres"."public"."stg_orders"
+),
+
+-- sessions that resulted in an order (same user, order within 30 min of click)
+converted as (
+    select
+        c.session_id,
+        c.user_id,
+        c.page,
+        c.device,
+        c.referrer,
+        c.clicked_at,
+        o.order_id,
+        o.total_amount
+    from clicks c
+    inner join orders o
+        on  c.user_id  = o.user_id
+        and o.ordered_at between c.clicked_at
+                             and c.clicked_at + interval '30 minutes'
+),
+
+traffic_summary as (
+    select
+        c.page,
+        c.device,
+        c.referrer,
+        c.clicked_at::date                          as visit_date,
+        count(distinct c.session_id)                as total_sessions,
+        count(distinct c.user_id)
+            filter (where not c.is_anonymous)       as logged_in_users,
+        count(distinct cv.session_id)               as converted_sessions,
+        round(
+            count(distinct cv.session_id)::numeric
+            / nullif(count(distinct c.session_id), 0) * 100
+        , 2)                                        as conversion_rate_pct,
+        round(coalesce(sum(cv.total_amount), 0), 2) as revenue_from_sessions,
+        round(avg(c.duration_secs), 0)              as avg_session_secs
+
+    from clicks c
+    left join converted cv using (session_id)
+    group by 1, 2, 3, 4
+)
+
+select * from traffic_summary
+order by visit_date desc, total_sessions desc
+  );
+  
+[0m17:28:17.181694 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_daily_revenue"} */
+
+  
+    
+
+  create  table "postgres"."public"."mart_daily_revenue__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/mart_daily_revenue.sql
+-- Aggregates orders by day — the main KPI table for the dashboard
+
+with orders as (
+    select * from "postgres"."public"."stg_orders"
+),
+
+daily as (
+    select
+        ordered_at::date                            as order_date,
+        category,
+        count(distinct order_id)                    as total_orders,
+        count(distinct user_id)                     as unique_customers,
+        sum(quantity)                               as units_sold,
+        round(sum(total_amount), 2)                 as gross_revenue,
+        round(avg(total_amount), 2)                 as avg_order_value,
+        round(avg(discount) * 100, 1)               as avg_discount_pct,
+
+        -- breakdown by status
+        count(*) filter (where status = 'delivered') as delivered_orders,
+        count(*) filter (where status = 'cancelled') as cancelled_orders,
+
+        -- breakdown by payment method
+        count(*) filter (where payment_method = 'credit_card') as cc_orders,
+        count(*) filter (where payment_method = 'gcash')       as gcash_orders,
+        count(*) filter (where payment_method = 'paypal')      as paypal_orders
+
+    from orders
+    group by 1, 2
+)
+
+select * from daily
+order by order_date desc, gross_revenue desc
+  );
+  
+[0m17:28:17.238631 [debug] [Thread-4  ]: SQL status: SELECT 5 in 0.056 seconds
+[0m17:28:17.245404 [debug] [Thread-4  ]: Using postgres connection "model.datapipeline.mart_daily_revenue"
+[0m17:28:17.245797 [debug] [Thread-3  ]: SQL status: SELECT 59 in 0.064 seconds
+[0m17:28:17.246066 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_daily_revenue"} */
+alter table "postgres"."public"."mart_daily_revenue__dbt_tmp" rename to "mart_daily_revenue"
+[0m17:28:17.248611 [debug] [Thread-3  ]: Using postgres connection "model.datapipeline.mart_traffic_funnel"
+[0m17:28:17.249122 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_traffic_funnel"} */
+alter table "postgres"."public"."mart_traffic_funnel__dbt_tmp" rename to "mart_traffic_funnel"
+[0m17:28:17.293944 [debug] [Thread-4  ]: SQL status: ALTER TABLE in 0.045 seconds
+[0m17:28:17.295363 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: COMMIT
+[0m17:28:17.295720 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.046 seconds
+[0m17:28:17.296067 [debug] [Thread-4  ]: Using postgres connection "model.datapipeline.mart_daily_revenue"
+[0m17:28:17.297206 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: COMMIT
+[0m17:28:17.297502 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: COMMIT
+[0m17:28:17.297780 [debug] [Thread-3  ]: Using postgres connection "model.datapipeline.mart_traffic_funnel"
+[0m17:28:17.298093 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: COMMIT
+[0m17:28:17.344341 [debug] [Thread-4  ]: SQL status: COMMIT in 0.046 seconds
+[0m17:28:17.344791 [debug] [Thread-3  ]: SQL status: COMMIT in 0.046 seconds
+[0m17:28:17.348591 [debug] [Thread-4  ]: Applying DROP to: "postgres"."public"."mart_daily_revenue__dbt_backup"
+[0m17:28:17.351003 [debug] [Thread-3  ]: Applying DROP to: "postgres"."public"."mart_traffic_funnel__dbt_backup"
+[0m17:28:17.353450 [debug] [Thread-4  ]: Using postgres connection "model.datapipeline.mart_daily_revenue"
+[0m17:28:17.354116 [debug] [Thread-3  ]: Using postgres connection "model.datapipeline.mart_traffic_funnel"
+[0m17:28:17.354429 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_daily_revenue"} */
+drop table if exists "postgres"."public"."mart_daily_revenue__dbt_backup" cascade
+[0m17:28:17.354731 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: /* {"app": "dbt", "dbt_version": "1.10.20", "profile_name": "datapipeline", "target_name": "dev", "node_id": "model.datapipeline.mart_traffic_funnel"} */
+drop table if exists "postgres"."public"."mart_traffic_funnel__dbt_backup" cascade
+[0m17:28:17.400481 [debug] [Thread-4  ]: SQL status: DROP TABLE in 0.045 seconds
+[0m17:28:17.402588 [debug] [Thread-4  ]: On model.datapipeline.mart_daily_revenue: Close
+[0m17:28:17.403142 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.048 seconds
+[0m17:28:17.404787 [debug] [Thread-3  ]: On model.datapipeline.mart_traffic_funnel: Close
+[0m17:28:17.405491 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2c3340>]}
+[0m17:28:17.406177 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '353df335-3bdf-449e-ab7a-7490c5f53117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7d00a0>]}
+[0m17:28:17.406775 [info ] [Thread-4  ]: 3 of 4 OK created sql table model public.mart_daily_revenue .................... [[32mSELECT 5[0m in 0.69s]
+[0m17:28:17.407463 [info ] [Thread-3  ]: 4 of 4 OK created sql table model public.mart_traffic_funnel ................... [[32mSELECT 59[0m in 0.69s]
+[0m17:28:17.408004 [debug] [Thread-4  ]: Finished running node model.datapipeline.mart_daily_revenue
+[0m17:28:17.408497 [debug] [Thread-3  ]: Finished running node model.datapipeline.mart_traffic_funnel
+[0m17:28:17.409565 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:17.409870 [debug] [MainThread]: On master: BEGIN
+[0m17:28:17.410148 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:28:17.847326 [debug] [MainThread]: SQL status: BEGIN in 0.437 seconds
+[0m17:28:17.848790 [debug] [MainThread]: On master: COMMIT
+[0m17:28:17.849614 [debug] [MainThread]: Using postgres connection "master"
+[0m17:28:17.850005 [debug] [MainThread]: On master: COMMIT
+[0m17:28:17.896243 [debug] [MainThread]: SQL status: COMMIT in 0.046 seconds
+[0m17:28:17.897608 [debug] [MainThread]: On master: Close
+[0m17:28:17.898935 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:28:17.899401 [debug] [MainThread]: Connection 'model.datapipeline.stg_orders' was properly closed.
+[0m17:28:17.899777 [debug] [MainThread]: Connection 'model.datapipeline.stg_page_clicks' was properly closed.
+[0m17:28:17.900110 [debug] [MainThread]: Connection 'model.datapipeline.mart_daily_revenue' was properly closed.
+[0m17:28:17.900444 [debug] [MainThread]: Connection 'model.datapipeline.mart_traffic_funnel' was properly closed.
+[0m17:28:17.901012 [info ] [MainThread]: 
+[0m17:28:17.901500 [info ] [MainThread]: Finished running 2 table models, 2 view models in 0 hours 0 minutes and 3.54 seconds (3.54s).
+[0m17:28:17.902968 [debug] [MainThread]: Command end result
+[0m17:28:17.930422 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/manifest.json
+[0m17:28:17.932140 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/semantic_manifest.json
+[0m17:28:17.936961 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/mattjersonfigueroa/datapipeline/dbt_project/target/run_results.json
+[0m17:28:17.937196 [info ] [MainThread]: 
+[0m17:28:17.937461 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:28:17.937680 [info ] [MainThread]: 
+[0m17:28:17.937899 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m17:28:17.940306 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.9604568, "process_in_blocks": "0", "process_kernel_time": 0.185793, "process_mem_max_rss": "135200768", "process_out_blocks": "0", "process_user_time": 1.276151}
+[0m17:28:17.940572 [debug] [MainThread]: Command `dbt run` succeeded at 17:28:17.940519 after 3.96 seconds
+[0m17:28:17.940820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd50670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1bd460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcf4d30>]}
+[0m17:28:17.941064 [debug] [MainThread]: Flushing usage events
+[0m17:28:18.783875 [debug] [MainThread]: An error was encountered while trying to flush usage events

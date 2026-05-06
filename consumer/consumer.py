@@ -24,11 +24,12 @@ TOPICS                  = ["orders", "page_clicks", "user_signups"]
 RETRY_DELAY_SECONDS     = 5
 
 DB_CONFIG = {
-    "host":     os.getenv("POSTGRES_HOST",     "localhost"),
-    "port":     int(os.getenv("POSTGRES_PORT", "5432")),
-    "dbname":   os.getenv("POSTGRES_DB",       "ecommerce"),
-    "user":     os.getenv("POSTGRES_USER",     "pipeline_user"),
-    "password": os.getenv("POSTGRES_PASSWORD", "pipeline_pass"),
+    "host":     "db.vjdfcormtplscencxggn.supabase.co",
+    "port":     5432,
+    "dbname":   "postgres",
+    "user":     "postgres",
+    "password": "databasepipeline0880",
+    "sslmode":  "require",
 }
 
 # --- DB Bootstrap

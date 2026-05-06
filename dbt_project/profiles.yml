@@ -3,10 +3,11 @@ datapipeline:
   outputs:
     dev:
       type: postgres
-      host: localhost
-      user: pipeline_user
-      password: pipeline_pass
+      host: db.vjdfcormtplscencxggn.supabase.co
       port: 5432
-      dbname: ecommerce
+      dbname: postgres
+      user: postgres
+      password: databasepipeline0880
       schema: public
       threads: 4
+      sslmode: require

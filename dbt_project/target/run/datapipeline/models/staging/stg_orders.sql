@@ -1,5 +1,5 @@
 
-  create view "ecommerce"."public"."stg_orders__dbt_tmp"
+  create view "postgres"."public"."stg_orders__dbt_tmp"
     
     
   as (
@@ -7,7 +7,7 @@
 -- Cleans and type-casts raw_orders into a reliable staging layer
 
 with source as (
-    select * from "ecommerce"."public"."raw_orders"
+    select * from "postgres"."public"."raw_orders"
 ),
 
 cleaned as (

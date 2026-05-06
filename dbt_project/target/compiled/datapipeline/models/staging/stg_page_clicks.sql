@@ -2,7 +2,7 @@
 -- Cleans raw_page_clicks, flags anonymous sessions
 
 with source as (
-    select * from "ecommerce"."public"."raw_page_clicks"
+    select * from "postgres"."public"."raw_page_clicks"
 ),
 
 cleaned as (

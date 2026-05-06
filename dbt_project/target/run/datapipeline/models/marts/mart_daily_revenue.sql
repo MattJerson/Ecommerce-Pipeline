@@ -2,7 +2,7 @@
   
     
 
-  create  table "ecommerce"."public"."mart_daily_revenue__dbt_tmp"
+  create  table "postgres"."public"."mart_daily_revenue__dbt_tmp"
   
   
     as
@@ -12,7 +12,7 @@
 -- Aggregates orders by day — the main KPI table for the dashboard
 
 with orders as (
-    select * from "ecommerce"."public"."stg_orders"
+    select * from "postgres"."public"."stg_orders"
 ),
 
 daily as (

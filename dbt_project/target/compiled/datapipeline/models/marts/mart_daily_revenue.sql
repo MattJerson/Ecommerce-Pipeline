@@ -2,7 +2,7 @@
 -- Aggregates orders by day — the main KPI table for the dashboard
 
 with orders as (
-    select * from "ecommerce"."public"."stg_orders"
+    select * from "postgres"."public"."stg_orders"
 ),
 
 daily as (

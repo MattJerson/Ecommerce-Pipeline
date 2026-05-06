@@ -2,7 +2,7 @@
   
     
 
-  create  table "ecommerce"."public"."mart_traffic_funnel__dbt_tmp"
+  create  table "postgres"."public"."mart_traffic_funnel__dbt_tmp"
   
   
     as
@@ -12,11 +12,11 @@
 -- Joins clicks + orders to measure conversion by page and device
 
 with clicks as (
-    select * from "ecommerce"."public"."stg_page_clicks"
+    select * from "postgres"."public"."stg_page_clicks"
 ),
 
 orders as (
-    select * from "ecommerce"."public"."stg_orders"
+    select * from "postgres"."public"."stg_orders"
 ),
 
 -- sessions that resulted in an order (same user, order within 30 min of click)

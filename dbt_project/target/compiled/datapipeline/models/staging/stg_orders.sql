@@ -2,7 +2,7 @@
 -- Cleans and type-casts raw_orders into a reliable staging layer
 
 with source as (
-    select * from "ecommerce"."public"."raw_orders"
+    select * from "postgres"."public"."raw_orders"
 ),
 
 cleaned as (

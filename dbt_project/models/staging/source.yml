@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: public
-    database: ecommerce
+    database: postgres
     schema: public
     description: "Raw tables written by the Kafka consumer"
 

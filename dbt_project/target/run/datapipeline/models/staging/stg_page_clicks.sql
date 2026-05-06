@@ -1,5 +1,5 @@
 
-  create view "ecommerce"."public"."stg_page_clicks__dbt_tmp"
+  create view "postgres"."public"."stg_page_clicks__dbt_tmp"
     
     
   as (
@@ -7,7 +7,7 @@
 -- Cleans raw_page_clicks, flags anonymous sessions
 
 with source as (
-    select * from "ecommerce"."public"."raw_page_clicks"
+    select * from "postgres"."public"."raw_page_clicks"
 ),
 
 cleaned as (
