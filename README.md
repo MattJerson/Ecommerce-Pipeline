@@ -14,11 +14,7 @@
 
 ---
 
-## 🔗 Live Demo
 
-👉 **[View Live Dashboard](#)** — hosted on Railway (free tier)
-
-> The dashboard reflects real-time simulated order, click, and signup event data processed through the full pipeline.
 
 ---
 
