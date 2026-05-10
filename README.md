@@ -14,7 +14,11 @@
 
 ---
 
+## 🔗 Live Demo
 
+👉 **[View Live Dashboard](https://youtu.be/LEYRoPxyhRE)** - Uploaded on Youtube 
+
+> The dashboard reflects real-time simulated order, click, and signup event data processed through the full pipeline.
 
 ---
 
